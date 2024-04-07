@@ -1,0 +1,9 @@
+div.flex.h-full.snap-mandatory.overflow-y-hidden {
+    border-radius: 0;
+    background-color: #8101a456;
+}
+
+
+div [data-testid="carousel"]> {
+    border-radius: 0 !important;
+}
