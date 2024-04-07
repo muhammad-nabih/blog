@@ -48,11 +48,10 @@ function Landing() {
           </div>
         </div>
         <div
-          className="flex h-full items-center justify-center dark:bg-gray-700 dark:text-white"
+          className="flex h-full bg-center max-sm:bg-left-bottom items-center justify-center dark:bg-gray-700 dark:text-white"
           style={{
             backgroundImage: `url("/landing3.jpg")`,
             backgroundSize: "cover",
-            backgroundPosition: "center",
             backgroundBlendMode: "overlay",
             backgroundColor: "#8101a456",
           }}
