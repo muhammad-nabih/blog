@@ -83,13 +83,15 @@ const CommentSection = () => {
                 <Image src="/man.png" alt="" width={40} height={40} />
               </div>
               <div>
-                <div className="font-medium dark:text-white">{com.user}</div>
-                <div className="text-sm text-gray-500 dark:text-gray-400">
+                <div className="font-bold dark:text-white text-purple-600">
+                  {com.user}
+                </div>
+                <div className="text-xs text-gray-500 dark:text-gray-400">
                   تم التحرير في : {com.date}
                 </div>
               </div>
             </div>
-            <div>{com.text}</div>
+            <div className="px-4 ">{com.text}</div>
           </div>
         );
       })}
