@@ -8,8 +8,12 @@ export default function Navbar_Component() {
   const pathname = usePathname();
 
   return (
-    <Navbar fluid className="bg-gray-900 text-white sticky top-0 z-50">
-      <Navbar.Brand href="/">
+    <Navbar
+      fluid
+      className="bg-gray-900 text-white sticky top-0 z-50"
+      dir="rtl"
+    >
+      <Navbar.Brand href="/" className="flex items-center gap-1 px-3 ">
         <Image
           width={50}
           height={50}
@@ -17,7 +21,7 @@ export default function Navbar_Component() {
           className=" aspect-square"
           alt=" Logo"
         />
-        <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
+        <span className="self-center whitespace-nowrap text-2xl font-semibold dark:text-white text-purple-300">
           BRAINBlOG
         </span>
       </Navbar.Brand>
@@ -26,10 +30,20 @@ export default function Navbar_Component() {
       </div>
       <Navbar.Collapse>
         <Navbar.Link
-          className={`${styles.link} ${pathname === "/" ? styles.active : ""}`}
+          className={`${styles.link} md:mx-5  ${
+            pathname === "/" ? styles.active : ""
+          }`}
           href="/"
         >
-          Home
+          الصفحة الرئيسية
+        </Navbar.Link>
+        <Navbar.Link
+          className={`${styles.link} ${
+            pathname === "/articles" ? styles.active : ""
+          }`}
+          href="/articles"
+        >
+          المقالات
         </Navbar.Link>
         <Navbar.Link
           className={`${styles.link} ${
@@ -37,15 +51,7 @@ export default function Navbar_Component() {
           }`}
           href="/about"
         >
-          About
-        </Navbar.Link>
-        <Navbar.Link
-          className={`${styles.link} ${
-            pathname === "/services" ? styles.active : ""
-          }`}
-          href="/services"
-        >
-          Services
+          ماذا عنا
         </Navbar.Link>
         <Navbar.Link
           className={`${styles.link} ${
@@ -53,7 +59,7 @@ export default function Navbar_Component() {
           }`}
           href="/contact"
         >
-          Contact
+          تواصل معنا
         </Navbar.Link>
       </Navbar.Collapse>
     </Navbar>
