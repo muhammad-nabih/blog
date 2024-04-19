@@ -42,7 +42,7 @@ const CommentSection = () => {
 
   return (
     <div className="w-10/12 container mx-auto my-5">
-      <h2 className="font-bold text-lg mb-2">
+      <h2 className="font-bold text-lg mb-2 max-lg:text-lg max-md:text-md max-sm:text-xs text-justify">
         يمكنك التعبير عن أفكارك هنا ومشاركة كل ما يخطر في تفكيرك بحرية مطلقة :
       </h2>
       <div>
@@ -65,7 +65,7 @@ const CommentSection = () => {
       <textarea
         value={comment}
         onChange={handleCommentChange}
-        className="w-full h-24 px-3 py-2 border rounded-md focus:outline-none focus:ring focus:border-purple-300"
+        className="w-full h-24 px-3 py-2 border rounded-md focus:outline-none focus:ring focus:border-purple-300 "
         placeholder="اكتب ما تفكر به هنا وما استفتد به من المقال..."
       />
       <button
