@@ -4,7 +4,7 @@ import { Carousel } from "flowbite-react";
 import "./landing.css";
 function Landing() {
   return (
-    <div className={styles.landing}>
+    <div dir="ltr" className={styles.landing}>
       <Carousel>
         <div
           className="flex h-full items-center justify-center dark:bg-gray-700 dark:text-white"
