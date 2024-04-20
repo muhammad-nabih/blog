@@ -2,6 +2,7 @@ import { Alexandria } from "next/font/google";
 import "./globals.css";
 import Navbar_Component from "@/components/Navbar/Navbar";
 import { ArticlesProvider } from "@/contexts/ArticlesContext/ArticlesContext";
+import Footer from "@/components/Footer/Footer";
 const alexandria = Alexandria({ subsets: ["arabic"] });
 
 export const metadata = {
@@ -16,6 +17,7 @@ export default function RootLayout({ children }) {
         <ArticlesProvider>
           <Navbar_Component />
           <div dir="rtl"> {children}</div>
+
         </ArticlesProvider>
       </body>
     </html>
