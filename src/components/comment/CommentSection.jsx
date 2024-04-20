@@ -38,6 +38,7 @@ const CommentSection = () => {
     localStorage.setItem("comments", JSON.stringify(updatedData));
     localStorage.setItem("user", JSON.stringify(user));
     setComment("");
+    setUser("");
   };
 
   return (
@@ -65,8 +66,8 @@ const CommentSection = () => {
       <textarea
         value={comment}
         onChange={handleCommentChange}
-        className="w-full h-24 px-3 py-2 border rounded-md focus:outline-none focus:ring focus:border-purple-300 "
-        placeholder="اكتب ما تفكر به هنا وما استفتد به من المقال..."
+        className="w-full h-24 px-3 py-2 border rounded-md focus:outline-none focus:ring focus:border-purple-300"
+        placeholder="اكتب ما تفكر به هنا ..."
       />
       <button
         onClick={handleSubmitComment}
@@ -91,7 +92,7 @@ const CommentSection = () => {
                 </div>
               </div>
             </div>
-            <div className="px-4 ">{com.text}</div>
+            <div className="px-4">{com.text}</div>
           </div>
         );
       })}
