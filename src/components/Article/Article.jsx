@@ -4,6 +4,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
+import { motion } from "framer-motion"; // استيراد motion من Framer Motion
+import CommentSection from "../comment/CommentSection";
+
 const Article = () => {
   const path = useParams();
 
@@ -14,7 +17,15 @@ const Article = () => {
     console.log(path);
     const dataJsx = articlesData.map((article) => (
       <Link key={article.id} href={`articles/${article.id}`}>
-        <div className=" bg-zinc-100 border border-1 border-zinc-600 rounded-lg shadow-xl p-1 overflow-hidden ">
+        <motion.div
+          key={article.id}
+          className=" bg-zinc-100 border border-1 border-zinc-600 rounded-lg shadow-xl p-1 overflow-hidden"
+          initial={{ opacity: 0, y: 20 }} // تأثير البداية: الكارت غير مرئي ومتحرك باتجاه الأسفل بقيمة 20px
+          animate={{ opacity: 1, y: 0 }} // تأثير الظهور: زيادة الشفافية وعودة الكارت إلى موضعه الطبيعي
+          transition={{ duration: 0.5, delay: 0.1 }} // مدة التأثير وتأخير بدايته
+          whileHover={{ scale: 1.05 }} // تأثير عند تحويل الماوس فوق الكارت
+          whileTap={{ scale: 0.95 }} // تأثير عند النقر على الكارت
+        >
           <div className="relative h-44">
             <Image
               src={article.image}
@@ -31,14 +42,20 @@ const Article = () => {
               {article.content}
             </p>
           </div>
-        </div>
+        </motion.div>
       </Link>
     ));
 
     setData(dataJsx);
   }, [articlesData, path]);
 
-  return <>{data}</>;
+  return (
+    <>
+      
+      {data}
+ 
+    </>
+  );
 };
 
 export default Article;

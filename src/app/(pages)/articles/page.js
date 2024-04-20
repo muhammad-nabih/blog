@@ -1,5 +1,7 @@
+
 import React from "react";
 import Article from "@/components/Article/Article";
+import CommentSection from "@/components/comment/CommentSection";
 
 const Articles = () => {
   return (
@@ -12,6 +14,7 @@ const Articles = () => {
       </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3  xl:grid-cols-4 gap-4  px-3 mx-auto container py-8  ">
         <Article />
+
       </div>{" "}
     </>
   );
