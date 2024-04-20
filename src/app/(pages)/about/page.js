@@ -10,7 +10,7 @@ const About = () => {
     {
       name: "د.زكريا",
       image: "/dr_zakria.png",
-      jobTitle: "المشرف علي المشروع ",
+      jobTitle: " المشرف ",
       info: "القائم علي المشروع وعلي مراجعة جميع النقاط والمسئول عن ظهور المدونة باعلي جودة والقائم علي ترتيب الافكار ورفع الروح المعنوية للفريق ",
     },
     {
@@ -33,7 +33,7 @@ const About = () => {
     },
     {
       name: "أمل",
-      image: "/aml.png",
+      image: "/heba.png",
       jobTitle: "الجزء الخلفي من الموقع",
       info: "مطور خلفي متخصص في تطوير وصيانة خوادم الويب والتطبيقات باستخدام لغات البرمجة مثل Node.js وقواعد البيانات مثل Array.",
     },
@@ -61,7 +61,9 @@ const About = () => {
           >
             معلومات عنا
           </motion.h1>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
+
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-y-8 text-center">
             {students.map((student, index) => (
               <motion.div
                 key={index}
@@ -79,8 +81,8 @@ const About = () => {
                   animate={{ scale: 1 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                 />
-                <p className="text-lg font-semibold">{student.name}</p>
-                <p className="text-sm">{student.jobTitle}</p>
+                <p className="text-lg font-semibold ">{student.name}</p>
+                <p className="text-sm max-md:text-xs">{student.jobTitle}</p>
               </motion.div>
             ))}
           </div>
