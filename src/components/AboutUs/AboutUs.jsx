@@ -53,8 +53,7 @@ const AboutUs = () => {
   return (
     <>
       <div className="container mx-auto  w-11/12 overflow-hidden">
-
-        <div className="grid grid-cols-2 md:grid-cols-3 w-full lg:grid-cols-3 gap-y-8 text-center">
+        <div className="grid grid-cols-2 md:grid-cols-3 w-full lg:grid-cols-3 gap-y-8 text-center min-h-screen max-sm:pb-16">
           {students.map((student, index) => (
             <motion.div
               key={index}
