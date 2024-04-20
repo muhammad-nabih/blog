@@ -62,7 +62,6 @@ const About = () => {
             معلومات عنا
           </motion.h1>
 
-
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-y-8 text-center">
             {students.map((student, index) => (
               <motion.div
