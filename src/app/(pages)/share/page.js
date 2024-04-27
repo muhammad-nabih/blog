@@ -6,7 +6,6 @@ import CommentSection from "@/components/comment/CommentSection";
 const Share = () => {
   return (
     <>
-      <Landing />
       <TitleSection firstPiece={"قسم"} secondPiece={"مشاركة الاراء"} />
       <CommentSection />
       <Footer />
