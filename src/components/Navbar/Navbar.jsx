@@ -37,6 +37,16 @@ export default function Navbar_Component() {
         >
           الصفحة الرئيسية
         </Navbar.Link>
+
+        <Navbar.Link
+          className={`${styles.link} ${
+            pathname === "/share" ? styles.active : ""
+          }`}
+          href="/share"
+        >
+          مشاركة رأيك
+        </Navbar.Link>
+
         <Navbar.Link
           className={`${styles.link} ${
             pathname === "/articles" ? styles.active : ""
@@ -45,6 +55,7 @@ export default function Navbar_Component() {
         >
           المقالات
         </Navbar.Link>
+
         <Navbar.Link
           className={`${styles.link} ${
             pathname === "/about" ? styles.active : ""
