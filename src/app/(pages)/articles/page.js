@@ -9,8 +9,10 @@ const Articles = () => {
   return (
     <>
       <TitleSection firstPiece={"صفحة"} secondPiece={"المقالات"} />
-      <Article />
-      <Footer/>
+      <div className="min-h-screen">
+        <Article />
+      </div>
+      <Footer />
     </>
   );
 };
