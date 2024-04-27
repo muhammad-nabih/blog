@@ -5,7 +5,7 @@ const Footer = () => {
     <footer className="bg-gray-950 shadow dark:bg-gray-800 w-full mx-auto">
       <div className="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
         <span className="text-sm text-gray-200 sm:text-center dark:text-gray-400">
-          © 2023{" "}
+          © 2024{" "}
           <a href="https://flowbite.com/" className="hover:underline">
             BRAINBLOG
           </a>
